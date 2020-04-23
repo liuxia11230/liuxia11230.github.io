@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="原生js,">
 
 
 
@@ -79,14 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta name="description" content="如何跳出forEach循环在forEach中返回return 不会中断执行,有下面两种办法可以解决   使用try监视代码块，在需要中断的地方抛出异常 使用some或是every代替 some在遇到return true时，every在遇到return false 的时候会中断执行    1234567try&amp;#123;    arr.forEach(val=&amp;gt;&amp;#123;        i">
+<meta name="keywords" content="原生js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="原生js技巧">
+<meta property="og:url" content="http://yoursite.com/2019/11/07/原生js技巧/index.html">
 <meta property="og:site_name" content="liuxBolg">
+<meta property="og:description" content="如何跳出forEach循环在forEach中返回return 不会中断执行,有下面两种办法可以解决   使用try监视代码块，在需要中断的地方抛出异常 使用some或是every代替 some在遇到return true时，every在遇到return false 的时候会中断执行    1234567try&amp;#123;    arr.forEach(val=&amp;gt;&amp;#123;        i">
 <meta property="og:locale" content="zh-C">
-<meta property="og:updated_time" content="2019-10-11T08:55:20.475Z">
+<meta property="og:updated_time" content="2019-11-07T06:42:51.326Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="分类">
+<meta name="twitter:title" content="原生js技巧">
+<meta name="twitter:description" content="如何跳出forEach循环在forEach中返回return 不会中断执行,有下面两种办法可以解决   使用try监视代码块，在需要中断的地方抛出异常 使用some或是every代替 some在遇到return true时，every在遇到return false 的时候会中断执行    1234567try&amp;#123;    arr.forEach(val=&amp;gt;&amp;#123;        i">
 
 
 
@@ -116,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/">
+  <link rel="canonical" href="http://yoursite.com/2019/11/07/原生js技巧/">
 
 
 
 
 
-  <title>分类 | liuxBolg</title>
+  <title>原生js技巧 | liuxBolg</title>
   
 
 
@@ -238,37 +242,186 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/07/原生js技巧/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cat">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/8f3ceb738f0a2837fd332efd83b5f94e.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="liuxBolg">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">分类</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/markdown/">markdown</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/react/">react</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/原生js/">原生js</a><span class="category-list-count">1</span></li></ul>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">原生js技巧</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-07T14:22:11+08:00">
+                2019-11-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/原生js/" itemprop="url" rel="index">
+                    <span itemprop="name">原生js</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h5 id="如何跳出forEach循环"><a href="#如何跳出forEach循环" class="headerlink" title="如何跳出forEach循环"></a>如何跳出<code>forEach</code>循环</h5><p>在<code>forEach</code>中返回return 不会中断执行,有下面两种办法可以解决</p>
+<blockquote>
+<ol>
+<li>使用try监视代码块，在需要中断的地方抛出异常</li>
+<li>使用some或是every代替 some在遇到return true时，every在遇到return false 的时候会中断执行</li>
+</ol>
+</blockquote>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">try&#123;</span><br><span class="line">    arr.forEach(val=&gt;&#123;</span><br><span class="line">        if(val.status)&#123;</span><br><span class="line">            throw Break</span><br><span class="line">        &#125; </span><br><span class="line">    &#125;)</span><br><span class="line">&#125;catch(e)&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+</div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/原生js/" rel="tag"># 原生js</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/12/markdown/" rel="next" title="markdown语法">
+                <i class="fa fa-chevron-left"></i> markdown语法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/11/07/react技巧/" rel="prev" title="react技巧">
+                react技巧 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -301,8 +454,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -364,6 +526,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#如何跳出forEach循环"><span class="nav-number">1.</span> <span class="nav-text">如何跳出forEach循环</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

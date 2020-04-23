@@ -1,45 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>网络科技2</title>
-    <url>/2019/10/11/title-1/</url>
-    <content><![CDATA[<!-- toc -->
-
-<h3 id="闲话"><a href="#闲话" class="headerlink" title="闲话"></a>闲话</h3><p><code>Live Photos</code> 是 iOS 9 的一个新特性，它提供相对于传统照片更生动的展现方式。当用户按下拍照键<br>的时候，照片 APP 会捕捉比传统照片更多的内容，包括声音和更多的帧。当用户浏览这些照片时，他们能与这些照片交互并且回放那些被捕捉的内容，这样让照片看起来更加生动。</p>
-<p>iOS 9.1 提供了与 <code>Live Photos</code> 交互的 API，还可以将这些数据导出，用作分享。新提供的 <code>Photos framework</code> 可以从 <code>PHImageManager</code> 对象中取得 <code>PHLivePhoto</code> 的实例。这个对象可以用来表示 <code>Live Photo</code> 中的数据。你可以使用 <code>PHLivePhotoView</code> 对象来现实 <code>Live Photo</code> 的内容。<code>PHLivePhotoView</code> 用于展示图片，处理用户交互，还有对内容显示的处理。</p>
-<p>你还可以使用 <code>PHAssetResource</code> 来访问 <code>PHLivePhoto</code> 来进行共享操作。你可以使用 <code>PHImageManager</code> 或 <code>UIImagePickerController</code> 来从用户的照片库中请求 <code>PHLivePhoto</code> 对象。如果你还在开发一个 Extension，你还可以使用 <code>NSItemProvider</code> 对象来获取 <code>PHLivePhoto</code> 对象。在接受共享的一方，你可以通过发送过来的文件，来重建 <code>PHLivePhoto</code>对象。</p>
-<a id="more"></a>
-
-<!-- toc -->
-
-<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p><code>PHLivePhotoView</code>需要导入<code>PhotosUI</code></p>
-]]></content>
+    <title>react技巧</title>
+    <url>/2019/11/07/react%E6%8A%80%E5%B7%A7/</url>
+    <content><![CDATA[]]></content>
       <categories>
-        <category>it</category>
+        <category>react</category>
       </categories>
       <tags>
-        <tag>iOS</tag>
+        <tag>react</tag>
       </tags>
   </entry>
   <entry>
-    <title>网络科技</title>
-    <url>/2019/10/11/title/</url>
-    <content><![CDATA[<!-- toc -->
+    <title>原生js技巧</title>
+    <url>/2019/11/07/%E5%8E%9F%E7%94%9Fjs%E6%8A%80%E5%B7%A7/</url>
+    <content><![CDATA[<h5 id="如何跳出forEach循环"><a href="#如何跳出forEach循环" class="headerlink" title="如何跳出forEach循环"></a>如何跳出<code>forEach</code>循环</h5><p>在<code>forEach</code>中返回return 不会中断执行,有下面两种办法可以解决</p>
+<blockquote>
+<ol>
+<li>使用try监视代码块，在需要中断的地方抛出异常</li>
+<li>使用some或是every代替 some在遇到return true时，every在遇到return false 的时候会中断执行</li>
+</ol>
+</blockquote>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">try&#123;</span><br><span class="line">    arr.forEach(val=&gt;&#123;</span><br><span class="line">        if(val.status)&#123;</span><br><span class="line">            throw Break</span><br><span class="line">        &#125; </span><br><span class="line">    &#125;)</span><br><span class="line">&#125;catch(e)&#123;&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="闲话"><a href="#闲话" class="headerlink" title="闲话"></a>闲话</h3><p><code>Live Photos</code> 是 iOS 9 的一个新特性，它提供相对于传统照片更生动的展现方式。当用户按下拍照键<br>的时候，照片 APP 会捕捉比传统照片更多的内容，包括声音和更多的帧。当用户浏览这些照片时，他们能与这些照片交互并且回放那些被捕捉的内容，这样让照片看起来更加生动。</p>
-<p>iOS 9.1 提供了与 <code>Live Photos</code> 交互的 API，还可以将这些数据导出，用作分享。新提供的 <code>Photos framework</code> 可以从 <code>PHImageManager</code> 对象中取得 <code>PHLivePhoto</code> 的实例。这个对象可以用来表示 <code>Live Photo</code> 中的数据。你可以使用 <code>PHLivePhotoView</code> 对象来现实 <code>Live Photo</code> 的内容。<code>PHLivePhotoView</code> 用于展示图片，处理用户交互，还有对内容显示的处理。</p>
-<p>你还可以使用 <code>PHAssetResource</code> 来访问 <code>PHLivePhoto</code> 来进行共享操作。你可以使用 <code>PHImageManager</code> 或 <code>UIImagePickerController</code> 来从用户的照片库中请求 <code>PHLivePhoto</code> 对象。如果你还在开发一个 Extension，你还可以使用 <code>NSItemProvider</code> 对象来获取 <code>PHLivePhoto</code> 对象。在接受共享的一方，你可以通过发送过来的文件，来重建 <code>PHLivePhoto</code>对象。</p>
-<a id="more"></a>
-
-<!-- toc -->
-
-<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p><code>PHLivePhotoView</code>需要导入<code>PhotosUI</code></p>
 ]]></content>
       <categories>
-        <category>xxx</category>
+        <category>原生js</category>
       </categories>
       <tags>
-        <tag>iOS</tag>
+        <tag>原生js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>markdown语法</title>
+    <url>/2019/10/12/markdown/</url>
+    <content><![CDATA[<h1 id="1级标题"><a href="#1级标题" class="headerlink" title="1级标题"></a>1级标题</h1><h2 id="2级标题"><a href="#2级标题" class="headerlink" title="2级标题"></a>2级标题</h2><blockquote>
+<p>这段文字被高亮…</p>
+</blockquote>
+<p><a href="http://www.baidu.com" target="_blank" rel="noopener">点击跳转到百度</a><br><img src="https://upload-images.jianshu.io/upload_images/703764-605e3cc2ecb664f6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">fun (x: Int, y: Int): Int &#123;</span><br><span class="line">  return x + y</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>$\color{black}{blackText}$，$\color{gray}{grayText}$</p>
+]]></content>
+      <categories>
+        <category>markdown</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
       </tags>
   </entry>
 </search>
