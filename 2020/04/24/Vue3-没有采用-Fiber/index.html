@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="javascript,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -79,18 +79,19 @@
 
 
 
-<meta name="description" content="如何跳出forEach循环在forEach中返回return 不会中断执行,有下面两种办法可以解决   使用try监视代码块，在需要中断的地方抛出异常 使用some或是every代替 some在遇到return true时，every在遇到return false 的时候会中断执行    1234567try&amp;#123;    arr.forEach(val=&amp;gt;&amp;#123;        i">
-<meta name="keywords" content="javascript">
+<meta name="description" content="vue3.0的主要突破点 performance:性能更强 Tree shaking支持：打包时不会将未使用模块打包 组合API（Composition API） Fragment(不再限制只有根节点，甚至可以是纯文本，会自动变成一个Fragments碎片) Teleport,  Suspense() Better TypeScript support：更优秀的Ts支持 Custom Render">
 <meta property="og:type" content="article">
-<meta property="og:title" content="原生js技巧">
-<meta property="og:url" content="http://yoursite.com/2019/11/07/原生js技巧/index.html">
+<meta property="og:title" content="Vue3 没有采用 Fiber">
+<meta property="og:url" content="http://yoursite.com/2020/04/24/Vue3-没有采用-Fiber/index.html">
 <meta property="og:site_name" content="liuxBolg">
-<meta property="og:description" content="如何跳出forEach循环在forEach中返回return 不会中断执行,有下面两种办法可以解决   使用try监视代码块，在需要中断的地方抛出异常 使用some或是every代替 some在遇到return true时，every在遇到return false 的时候会中断执行    1234567try&amp;#123;    arr.forEach(val=&amp;gt;&amp;#123;        i">
+<meta property="og:description" content="vue3.0的主要突破点 performance:性能更强 Tree shaking支持：打包时不会将未使用模块打包 组合API（Composition API） Fragment(不再限制只有根节点，甚至可以是纯文本，会自动变成一个Fragments碎片) Teleport,  Suspense() Better TypeScript support：更优秀的Ts支持 Custom Render">
 <meta property="og:locale" content="zh-C">
-<meta property="og:updated_time" content="2020-04-24T01:11:00.802Z">
+<meta property="og:image" content="http://yoursite.com/images/E07F20C3-AE56-4841-86E0-E6316C9F7614.png">
+<meta property="og:updated_time" content="2020-04-26T07:35:13.994Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="原生js技巧">
-<meta name="twitter:description" content="如何跳出forEach循环在forEach中返回return 不会中断执行,有下面两种办法可以解决   使用try监视代码块，在需要中断的地方抛出异常 使用some或是every代替 some在遇到return true时，every在遇到return false 的时候会中断执行    1234567try&amp;#123;    arr.forEach(val=&amp;gt;&amp;#123;        i">
+<meta name="twitter:title" content="Vue3 没有采用 Fiber">
+<meta name="twitter:description" content="vue3.0的主要突破点 performance:性能更强 Tree shaking支持：打包时不会将未使用模块打包 组合API（Composition API） Fragment(不再限制只有根节点，甚至可以是纯文本，会自动变成一个Fragments碎片) Teleport,  Suspense() Better TypeScript support：更优秀的Ts支持 Custom Render">
+<meta name="twitter:image" content="http://yoursite.com/images/E07F20C3-AE56-4841-86E0-E6316C9F7614.png">
 
 
 
@@ -120,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/11/07/原生js技巧/">
+  <link rel="canonical" href="http://yoursite.com/2020/04/24/Vue3-没有采用-Fiber/">
 
 
 
 
 
-  <title>原生js技巧 | liuxBolg</title>
+  <title>Vue3 没有采用 Fiber | liuxBolg</title>
   
 
 
@@ -254,7 +255,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/07/原生js技巧/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/24/Vue3-没有采用-Fiber/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="cat">
@@ -271,7 +272,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">原生js技巧</h1>
+          <h1 class="post-title" itemprop="name headline">Vue3 没有采用 Fiber</h1>
         
 
         <div class="post-meta">
@@ -283,8 +284,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-07T14:22:11+08:00">
-                2019-11-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-24T14:17:23+08:00">
+                2020-04-24
               </time>
             
 
@@ -293,28 +294,6 @@
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/javascript/" itemprop="url" rel="index">
-                    <span itemprop="name">javascript</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -343,15 +322,37 @@
       
 
       
-        <h5 id="如何跳出forEach循环"><a href="#如何跳出forEach循环" class="headerlink" title="如何跳出forEach循环"></a>如何跳出<code>forEach</code>循环</h5><p>在<code>forEach</code>中返回return 不会中断执行,有下面两种办法可以解决</p>
+        <h2 id="vue3-0的主要突破点"><a href="#vue3-0的主要突破点" class="headerlink" title="vue3.0的主要突破点"></a>vue3.0的主要突破点</h2><ul>
+<li>performance:性能更强</li>
+<li>Tree shaking支持：打包时不会将未使用模块打包</li>
+<li>组合API（Composition API）</li>
+<li>Fragment(不再限制只有根节点，甚至可以是纯文本，会自动变成一个Fragments碎片)</li>
+<li>Teleport, </li>
+<li>Suspense()</li>
+<li>Better TypeScript support：更优秀的Ts支持</li>
+<li>Custom Renderer API：暴露了自定义渲染API</li>
+</ul>
+<h2 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h2><p> 模版编译优化</p>
 <blockquote>
-<ol>
-<li>使用try监视代码块，在需要中断的地方抛出异常</li>
-<li>使用some或是every代替 some在遇到return true时，every在遇到return false 的时候会中断执行</li>
-</ol>
+<p>在生成virtual dom的时候，静态节点将会在diff算法直接跳过对比，而动态节点在creat后会有一个pacthFlg，js在runtime的时候将会跟踪pachFlg的节点。<br>pathFlg的美枚举定义</p>
 </blockquote>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">try&#123;</span><br><span class="line">    arr.forEach(val=&gt;&#123;</span><br><span class="line">        if(val.status)&#123;</span><br><span class="line">            throw Break</span><br><span class="line">        &#125; </span><br><span class="line">    &#125;)</span><br><span class="line">&#125;catch(e)&#123;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">export const enum PatchFlags &#123;</span><br><span class="line">  </span><br><span class="line">  TEXT = 1,// 表示具有动态textContent的元素</span><br><span class="line">  CLASS = 1 &lt;&lt; 1,  // 表示有动态Class的元素</span><br><span class="line">  STYLE = 1 &lt;&lt; 2,  // 表示动态样式（静态如style=&quot;color: red&quot;，也会提升至动态）</span><br><span class="line">  PROPS = 1 &lt;&lt; 3,  // 表示具有非类/样式动态道具的元素。</span><br><span class="line">  FULL_PROPS = 1 &lt;&lt; 4,  // 表示带有动态键的道具的元素，与上面三种相斥</span><br><span class="line">  HYDRATE_EVENTS = 1 &lt;&lt; 5,  // 表示带有事件监听器的元素</span><br><span class="line">  STABLE_FRAGMENT = 1 &lt;&lt; 6,   // 表示其子顺序不变的片段（没懂）。 </span><br><span class="line">  KEYED_FRAGMENT = 1 &lt;&lt; 7, // 表示带有键控或部分键控子元素的片段。</span><br><span class="line">  UNKEYED_FRAGMENT = 1 &lt;&lt; 8, // 表示带有无key绑定的片段</span><br><span class="line">  NEED_PATCH = 1 &lt;&lt; 9,   // 表示只需要非属性补丁的元素，例如ref或hooks</span><br><span class="line">  DYNAMIC_SLOTS = 1 &lt;&lt; 10,  // 表示具有动态插槽的元素</span><br><span class="line">  // 特殊 FLAGS -------------------------------------------------------------</span><br><span class="line">  HOISTED = -1,  // 特殊标志是负整数表示永远不会用作diff,只需检查 patchFlag === FLAG.</span><br><span class="line">  BAIL = -2 // 一个特殊的标志，指代差异算法（没懂）</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>通过patchFlg可以判断动态节点中修改的属性，没有涉及到的可以不用考虑。</p>
+<p><img src="/images/E07F20C3-AE56-4841-86E0-E6316C9F7614.png" alt="blockchain" title="图"></p>
+<p>上图所示vue3.0的diff算法中不会对比静态节点。</p>
+<h3 id="静态提升"><a href="#静态提升" class="headerlink" title="静态提升"></a>静态提升</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">const _hoisted_1 = &#123; id: &quot;app&quot; &#125;</span><br><span class="line">const _hoisted_2 = _createVNode(&quot;h1&quot;, null, &quot;技术摸鱼&quot;, -1 /* HOISTED */)</span><br><span class="line">const _hoisted_3 = _createVNode(&quot;p&quot;, null, &quot;今天天气真不错&quot;, -1 /* HOISTED */)</span><br><span class="line"></span><br><span class="line">export function render(_ctx, _cache) &#123;</span><br><span class="line">  return (_openBlock(), _createBlock(&quot;div&quot;, _hoisted_1, [</span><br><span class="line">    _hoisted_2,</span><br><span class="line">    _hoisted_3,</span><br><span class="line">    _createVNode(&quot;div&quot;, null, _toDisplayString(_ctx.name), 1 /* TEXT */),</span><br><span class="line">    _createVNode(&quot;div&quot;, &#123;</span><br><span class="line">      class: &#123;red:_ctx.isRed&#125;</span><br><span class="line">    &#125;, &quot;摸鱼符&quot;, 2 /* CLASS */)</span><br><span class="line">  ]))</span><br></pre></td></tr></table></figure>
+
+<p>就是把静态节点但是提出来，这样在创建virtual dom的时候不会重复去创建子节点（对于内存会有提升）</p>
+<h3 id="事件监听缓存"><a href="#事件监听缓存" class="headerlink" title="事件监听缓存"></a>事件监听缓存</h3><blockquote>
+<p>vue3.0中会尽量去判断你绑定的方法是否会有改变，如果没有改变将会把该方法进行缓存，不会在dom更新的时候重新绑定方法。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">export function render(_ctx, _cache) &#123;</span><br><span class="line">  return (_openBlock(), _createBlock(&quot;div&quot;, null, [</span><br><span class="line">    _createVNode(&quot;span&quot;, &#123;</span><br><span class="line">      onClick: _cache[1] || (_cache[1] = $event =&gt; (_ctx.onClick($event)))</span><br><span class="line">    &#125;, _toDisplayString(_ctx.msg), 1 /* TEXT */)</span><br><span class="line">  ]))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="ssr"><a href="#ssr" class="headerlink" title="ssr"></a>ssr</h3><blockquote>
+<p>他会把所有的节点看成是一个是字符串</p>
+</blockquote>
+<h3 id="vue3-0为什么不用fiber呢"><a href="#vue3-0为什么不用fiber呢" class="headerlink" title="vue3.0为什么不用fiber呢"></a>vue3.0为什么不用fiber呢</h3><p>vue的proxy+vdom+静态标记，已经把任务做到很细了，所以也不太需要事件切片了（time-slice）</p>
 
       
     </div>
@@ -375,12 +376,6 @@
 </div>
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/javascript/" rel="tag"># javascript</a>
-          
-        </div>
-      
 
       
       
@@ -390,8 +385,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/12/markdown/" rel="next" title="markdown语法">
-                <i class="fa fa-chevron-left"></i> markdown语法
+              <a href="/2020/04/24/Fiber-架构/" rel="next" title="Fiber 架构">
+                <i class="fa fa-chevron-left"></i> Fiber 架构
               </a>
             
           </div>
@@ -400,8 +395,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/07/react技巧/" rel="prev" title="react HOOK">
-                react HOOK <i class="fa fa-chevron-right"></i>
+              <a href="/2020/04/29/js运行核心-事件循环（Event-Loop）/" rel="prev" title="js运行核心-事件循环（Event-Loop）">
+                js运行核心-事件循环（Event-Loop） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -536,7 +531,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#如何跳出forEach循环"><span class="nav-number">1.</span> <span class="nav-text">如何跳出forEach循环</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#vue3-0的主要突破点"><span class="nav-number">1.</span> <span class="nav-text">vue3.0的主要突破点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性能"><span class="nav-number">2.</span> <span class="nav-text">性能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#静态提升"><span class="nav-number">2.1.</span> <span class="nav-text">静态提升</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件监听缓存"><span class="nav-number">2.2.</span> <span class="nav-text">事件监听缓存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ssr"><span class="nav-number">2.3.</span> <span class="nav-text">ssr</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vue3-0为什么不用fiber呢"><span class="nav-number">2.4.</span> <span class="nav-text">vue3.0为什么不用fiber呢</span></a></li></ol></li></ol></div>
             
 
           </div>

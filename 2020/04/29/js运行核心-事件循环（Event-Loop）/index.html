@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="react,">
+  <meta name="keywords" content="javascript,">
 
 
 
@@ -79,15 +79,18 @@
 
 
 
-<meta name="keywords" content="react">
+<meta name="description" content="2e3 Event-Loop是如何诞生的？ 由于js是单线程的，对于网页脚本多线程对显得很复杂，而且可能执行结果会相互影响，对于dom的显示不太友好，那么单线程就一定会造成阻塞，为了解决这个问题Event-Loop诞生了。js也分为同步和异步，而异步是不会阻塞主线程的运行的，他会等待主线程的代码执行完毕。  了解程序、进程、线程 程序：程序是静态的，一个程序包含多个进程 进程：相当于工厂，进程让程">
+<meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="react HOOK">
-<meta property="og:url" content="http://yoursite.com/2019/11/07/react技巧/index.html">
+<meta property="og:title" content="js运行核心-事件循环（Event-Loop）">
+<meta property="og:url" content="http://yoursite.com/2020/04/29/js运行核心-事件循环（Event-Loop）/index.html">
 <meta property="og:site_name" content="liuxBolg">
+<meta property="og:description" content="2e3 Event-Loop是如何诞生的？ 由于js是单线程的，对于网页脚本多线程对显得很复杂，而且可能执行结果会相互影响，对于dom的显示不太友好，那么单线程就一定会造成阻塞，为了解决这个问题Event-Loop诞生了。js也分为同步和异步，而异步是不会阻塞主线程的运行的，他会等待主线程的代码执行完毕。  了解程序、进程、线程 程序：程序是静态的，一个程序包含多个进程 进程：相当于工厂，进程让程">
 <meta property="og:locale" content="zh-C">
-<meta property="og:updated_time" content="2020-06-15T09:00:02.519Z">
+<meta property="og:updated_time" content="2020-06-15T09:00:24.994Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="react HOOK">
+<meta name="twitter:title" content="js运行核心-事件循环（Event-Loop）">
+<meta name="twitter:description" content="2e3 Event-Loop是如何诞生的？ 由于js是单线程的，对于网页脚本多线程对显得很复杂，而且可能执行结果会相互影响，对于dom的显示不太友好，那么单线程就一定会造成阻塞，为了解决这个问题Event-Loop诞生了。js也分为同步和异步，而异步是不会阻塞主线程的运行的，他会等待主线程的代码执行完毕。  了解程序、进程、线程 程序：程序是静态的，一个程序包含多个进程 进程：相当于工厂，进程让程">
 
 
 
@@ -117,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/11/07/react技巧/">
+  <link rel="canonical" href="http://yoursite.com/2020/04/29/js运行核心-事件循环（Event-Loop）/">
 
 
 
 
 
-  <title>react HOOK | liuxBolg</title>
+  <title>js运行核心-事件循环（Event-Loop） | liuxBolg</title>
   
 
 
@@ -251,7 +254,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/07/react技巧/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/29/js运行核心-事件循环（Event-Loop）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="cat">
@@ -268,7 +271,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">react HOOK</h1>
+          <h1 class="post-title" itemprop="name headline">js运行核心-事件循环（Event-Loop）</h1>
         
 
         <div class="post-meta">
@@ -280,8 +283,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-07T14:56:23+08:00">
-                2019-11-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-29T09:55:49+08:00">
+                2020-04-29
               </time>
             
 
@@ -303,8 +306,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/react/" itemprop="url" rel="index">
-                    <span itemprop="name">react</span>
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
                   </a>
                 </span>
 
@@ -340,7 +343,59 @@
       
 
       
-        
+        <p>2e3</p>
+<h2 id="Event-Loop是如何诞生的？"><a href="#Event-Loop是如何诞生的？" class="headerlink" title="Event-Loop是如何诞生的？"></a>Event-Loop是如何诞生的？</h2><blockquote>
+<p>由于js是单线程的，对于网页脚本多线程对显得很复杂，而且可能执行结果会相互影响，对于dom的显示不太友好，那么单线程就一定会造成阻塞，为了解决这个问题Event-Loop诞生了。<br>js也分为同步和异步，而异步是不会阻塞主线程的运行的，他会等待主线程的代码执行完毕。</p>
+</blockquote>
+<h2 id="了解程序、进程、线程"><a href="#了解程序、进程、线程" class="headerlink" title="了解程序、进程、线程"></a>了解程序、进程、线程</h2><ul>
+<li>程序：程序是静态的，一个程序包含多个进程</li>
+<li>进程：相当于工厂，进程让程序动态化了（cpu&lt;承担所有计算任务&gt;资源分配的最小单位）</li>
+<li>线程：相当于工厂的工人，一个进程有多个线程 </li>
+</ul>
+<h2 id="浏览器是多进程"><a href="#浏览器是多进程" class="headerlink" title="浏览器是多进程"></a>浏览器是多进程</h2><ul>
+<li>主进程<ul>
+<li>协调其他子进程（创建、销毁）</li>
+<li>处理不可见操作，网络呢请求，文件访问</li>
+</ul>
+</li>
+<li>第三方插件进程</li>
+<li>GPU<ul>
+<li>绘制3D</li>
+</ul>
+</li>
+<li>渲染进程，也就是浏览器内核</li>
+</ul>
+<h2 id="渲染进程"><a href="#渲染进程" class="headerlink" title="渲染进程"></a>渲染进程</h2><p>对于渲染进程来说也是多线程的</p>
+<ul>
+<li><p>CUI渲染线程</p>
+<ul>
+<li>负责渲染页面，布局和绘制</li>
+<li>页面需要吗重绘和回流的时候</li>
+<li>与js引擎互斥，防止渲染结果不可预期</li>
+</ul>
+</li>
+<li><p>js引擎线程</p>
+<ul>
+<li>负责解析和执行javascript</li>
+<li>只有一个js引擎（单线程）</li>
+<li>GUI线程互斥</li>
+</ul>
+</li>
+<li><p>事件触发线程</p>
+<ul>
+<li>用来控制事件循环</li>
+</ul>
+</li>
+<li><p>定时触发线程</p>
+</li>
+<li><p>异步http请求线程</p>
+</li>
+</ul>
+<h2 id="Event-Loop"><a href="#Event-Loop" class="headerlink" title="Event Loop"></a>Event Loop</h2><p>js中的内存分为 堆内存(heap) 和 栈内存(stack), 堆内存 中存的是我们声明的object类型的数据，栈内存 中存的是 基本数据类型 以及 函数执行时的运行空间。我们的 同步 代码就放在 执行栈 中，那异步代码呢？浏览器会将 dom事件 ajax setTimeout等异步代码放到队列中，等待执行栈中的代码都执行完毕，才会执行队列中的代码，是不是有点像发布订阅模式。<br>这是因为 异步分为 微任务(microtask) 和 宏任务(task)，执行的顺序是 执行栈中的代码 =&gt; 微任务 =&gt; 宏任务。</p>
+<h2 id="执行栈"><a href="#执行栈" class="headerlink" title="执行栈"></a>执行栈</h2><p>执行栈中的代码永远最先执行</p>
+<h2 id="微任务-microtask-promise-MutationObserver…"><a href="#微任务-microtask-promise-MutationObserver…" class="headerlink" title="微任务(microtask): promise MutationObserver…"></a>微任务(microtask): promise MutationObserver…</h2><p>当执行栈中的代码执行完毕，会在执行宏任务队列之前先看看微任务队列中有没有任务，如果有会先将微任务队列中的任务清空才会去执行宏任务队列</p>
+<h2 id="宏任务-task-setTimeout-setInterval-setImmediate-IE专用-messageChannel…"><a href="#宏任务-task-setTimeout-setInterval-setImmediate-IE专用-messageChannel…" class="headerlink" title="宏任务(task): setTimeout setInterval setImmediate(IE专用) messageChannel…"></a>宏任务(task): setTimeout setInterval setImmediate(IE专用) messageChannel…</h2><p>等待执行栈和微任务队列都执行完毕才会执行，并且在执行完每一个宏任务之后，会去看看微任务队列有没有新添加的任务，如果有，会先将微任务队列中的任务清空，才会继续执行下一个宏任务</p>
+
       
     </div>
     
@@ -365,7 +420,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/react/" rel="tag"># react</a>
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
           
         </div>
       
@@ -378,8 +433,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/07/原生js技巧/" rel="next" title="原生js技巧">
-                <i class="fa fa-chevron-left"></i> 原生js技巧
+              <a href="/2020/04/24/Vue3-没有采用-Fiber/" rel="next" title="Vue3 没有采用 Fiber">
+                <i class="fa fa-chevron-left"></i> Vue3 没有采用 Fiber
               </a>
             
           </div>
@@ -388,8 +443,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/04/24/Fiber-架构/" rel="prev" title="Fiber 架构">
-                Fiber 架构 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/05/07/webpack详解/" rel="prev" title="webpack详解">
+                webpack详解 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -442,8 +497,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -505,6 +569,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Event-Loop是如何诞生的？"><span class="nav-number">1.</span> <span class="nav-text">Event-Loop是如何诞生的？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#了解程序、进程、线程"><span class="nav-number">2.</span> <span class="nav-text">了解程序、进程、线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浏览器是多进程"><span class="nav-number">3.</span> <span class="nav-text">浏览器是多进程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#渲染进程"><span class="nav-number">4.</span> <span class="nav-text">渲染进程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Event-Loop"><span class="nav-number">5.</span> <span class="nav-text">Event Loop</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#执行栈"><span class="nav-number">6.</span> <span class="nav-text">执行栈</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微任务-microtask-promise-MutationObserver…"><span class="nav-number">7.</span> <span class="nav-text">微任务(microtask): promise MutationObserver…</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#宏任务-task-setTimeout-setInterval-setImmediate-IE专用-messageChannel…"><span class="nav-number">8.</span> <span class="nav-text">宏任务(task): setTimeout setInterval setImmediate(IE专用) messageChannel…</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="react,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -79,15 +79,17 @@
 
 
 
-<meta name="keywords" content="react">
+<meta name="description" content="前言随着互联网的迅速发展，个大企业越来越重视安全性问题，这时前端人员要面对传统的XSS,CSRF等安全性问题之外还有，网络劫持的新型安全性问题。当然随着各大浏览器的崛起他们也在自身中加强了安全防范意识。 XSS攻击 Cross-Site Scripting(跨站脚本攻击)为了和css区分于是缩写名称为XSS。通过目标网站上注入恶意代码，使之在浏览器上面运行。攻击者可获取用户的敏感信息如cookie">
 <meta property="og:type" content="article">
-<meta property="og:title" content="react HOOK">
-<meta property="og:url" content="http://yoursite.com/2019/11/07/react技巧/index.html">
+<meta property="og:title" content="前端安全防范">
+<meta property="og:url" content="http://yoursite.com/2020/05/07/前端安全防范/index.html">
 <meta property="og:site_name" content="liuxBolg">
+<meta property="og:description" content="前言随着互联网的迅速发展，个大企业越来越重视安全性问题，这时前端人员要面对传统的XSS,CSRF等安全性问题之外还有，网络劫持的新型安全性问题。当然随着各大浏览器的崛起他们也在自身中加强了安全防范意识。 XSS攻击 Cross-Site Scripting(跨站脚本攻击)为了和css区分于是缩写名称为XSS。通过目标网站上注入恶意代码，使之在浏览器上面运行。攻击者可获取用户的敏感信息如cookie">
 <meta property="og:locale" content="zh-C">
-<meta property="og:updated_time" content="2020-06-15T09:00:02.519Z">
+<meta property="og:updated_time" content="2020-05-07T09:43:24.628Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="react HOOK">
+<meta name="twitter:title" content="前端安全防范">
+<meta name="twitter:description" content="前言随着互联网的迅速发展，个大企业越来越重视安全性问题，这时前端人员要面对传统的XSS,CSRF等安全性问题之外还有，网络劫持的新型安全性问题。当然随着各大浏览器的崛起他们也在自身中加强了安全防范意识。 XSS攻击 Cross-Site Scripting(跨站脚本攻击)为了和css区分于是缩写名称为XSS。通过目标网站上注入恶意代码，使之在浏览器上面运行。攻击者可获取用户的敏感信息如cookie">
 
 
 
@@ -117,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/11/07/react技巧/">
+  <link rel="canonical" href="http://yoursite.com/2020/05/07/前端安全防范/">
 
 
 
 
 
-  <title>react HOOK | liuxBolg</title>
+  <title>前端安全防范 | liuxBolg</title>
   
 
 
@@ -251,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/07/react技巧/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/07/前端安全防范/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="cat">
@@ -268,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">react HOOK</h1>
+          <h1 class="post-title" itemprop="name headline">前端安全防范</h1>
         
 
         <div class="post-meta">
@@ -280,8 +282,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-07T14:56:23+08:00">
-                2019-11-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-07T15:39:04+08:00">
+                2020-05-07
               </time>
             
 
@@ -290,28 +292,6 @@
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/react/" itemprop="url" rel="index">
-                    <span itemprop="name">react</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -340,7 +320,24 @@
       
 
       
-        
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>随着互联网的迅速发展，个大企业越来越重视安全性问题，这时前端人员要面对传统的XSS,CSRF等安全性问题之外还有，网络劫持的新型安全性问题。当然<br>随着各大浏览器的崛起他们也在自身中加强了安全防范意识。</p>
+<h2 id="XSS攻击"><a href="#XSS攻击" class="headerlink" title="XSS攻击"></a>XSS攻击</h2><blockquote>
+<p>Cross-Site Scripting(跨站脚本攻击)为了和css区分于是缩写名称为XSS。<br>通过目标网站上注入恶意代码，使之在浏览器上面运行。攻击者可获取用户的敏感信息如cookie，SessionID等。<br>就算输入长度收到了限制，他可以引入外部脚本，并由浏览器执行，来完成比较复杂的攻击</p>
+</blockquote>
+<h2 id="XSS分类"><a href="#XSS分类" class="headerlink" title="XSS分类"></a>XSS分类</h2><p>  储存型、反射型、DOM型</p>
+<h3 id="储存型"><a href="#储存型" class="headerlink" title="储存型"></a>储存型</h3><p> 1.攻击者将恶意代码提交到数据库中<br> 2.用户再次打开用户网站是读取数据中的数据，通过浏览器执行恶有代码<br> 3.恶意代码可窃取用户数据，或者冒充用户行为调用接口执行一些操作</p>
+<p> 常出现在保存数据的网站中，如商品评论等。</p>
+<h3 id="反射型"><a href="#反射型" class="headerlink" title="反射型"></a>反射型</h3><p>1.用户构造出恶意的URL，服务端从URL中读取数据，服务端经过操作在返回给浏览器。执行。</p>
+<p>储存行、反射型的区别是，一个存数据库，一个存URL<br>反射型 XSS 漏洞常见于通过 URL 传递参数的功能，如网站搜索、跳转等。<br>由于需要用户主动打开恶意的 URL 才能生效，攻击者往往会结合多种手段诱导用户点击。<br>POST 的内容也可以触发反射型 XSS，只不过其触发条件比较苛刻（需要构造表单提交页面，并引导用户点击），所以非常少见。</p>
+<h3 id="DOM型"><a href="#DOM型" class="headerlink" title="DOM型"></a>DOM型</h3><p>1.用户构造出恶意的URL，用户大开URL，前端从URL中读取数据，恶意代码开始执行。</p>
+<p>DOM 型 XSS 跟前两种 XSS 的区别：DOM 型 XSS 攻击中，取出和执行恶意代码由浏览器端完成，属于前端 JavaScript 自身的安全漏洞，而其他两种 XSS 都属于服务端的安全漏洞。</p>
+<h2 id="XSS防御"><a href="#XSS防御" class="headerlink" title="XSS防御"></a>XSS防御</h2><p>xss攻击的本质是</p>
+<ul>
+<li>攻击者提交恶意代码</li>
+<li>浏览器执行恶意代码</li>
+</ul>
+<p>那么前端过滤用户输入行吗？当然是不行的，要是攻击者直接构造请求绕过前端过滤，也是不行的。</p>
+
       
     </div>
     
@@ -363,12 +360,6 @@
 </div>
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/react/" rel="tag"># react</a>
-          
-        </div>
-      
 
       
       
@@ -378,8 +369,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/07/原生js技巧/" rel="next" title="原生js技巧">
-                <i class="fa fa-chevron-left"></i> 原生js技巧
+              <a href="/2020/05/07/webpack详解/" rel="next" title="webpack详解">
+                <i class="fa fa-chevron-left"></i> webpack详解
               </a>
             
           </div>
@@ -388,8 +379,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/04/24/Fiber-架构/" rel="prev" title="Fiber 架构">
-                Fiber 架构 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/05/08/Docker/" rel="prev" title="Docker">
+                Docker <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -442,8 +433,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -505,6 +505,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XSS攻击"><span class="nav-number">2.</span> <span class="nav-text">XSS攻击</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XSS分类"><span class="nav-number">3.</span> <span class="nav-text">XSS分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#储存型"><span class="nav-number">3.1.</span> <span class="nav-text">储存型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#反射型"><span class="nav-number">3.2.</span> <span class="nav-text">反射型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM型"><span class="nav-number">3.3.</span> <span class="nav-text">DOM型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XSS防御"><span class="nav-number">4.</span> <span class="nav-text">XSS防御</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
