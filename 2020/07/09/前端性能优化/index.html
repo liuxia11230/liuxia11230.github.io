@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>Archives | Hexo</title>
+  <title>前端性能优化 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <meta name="description" content="##构建优化  1.开启 gzip 压缩，gzip 压缩效率非常高。可以达到 70% 2.使用 CDN 减少打包体积   3.预渲染  ##感知性能优化  1.骨架屏   2.loading  ##资源优化  1.预加载无线网后资源加载受限与网络。因此资源缓存，减少网络请求  ##图片优化  1.懒加载，将真实图片 url 存在 data-url 中，只要 src 没有 url 就不会发出请求，滚">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端性能优化">
+<meta property="og:url" content="http://example.com/2020/07/09/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="##构建优化  1.开启 gzip 压缩，gzip 压缩效率非常高。可以达到 70% 2.使用 CDN 减少打包体积   3.预渲染  ##感知性能优化  1.骨架屏   2.loading  ##资源优化  1.预加载无线网后资源加载受限与网络。因此资源缓存，减少网络请求  ##图片优化  1.懒加载，将真实图片 url 存在 data-url 中，只要 src 没有 url 就不会发出请求，滚">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-09T07:51:09.000Z">
+<meta property="article:modified_time" content="2024-03-20T07:26:42.060Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="面试">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -67,230 +72,108 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2024" class="archive-year">2024</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/03/20/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-03-20T07:26:42.068Z" itemprop="datePublished">Mar 20</time>
+        <section id="main"><article id="post-前端性能优化" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/07/09/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="article-date">
+  <time class="dt-published" datetime="2020-07-09T07:51:09.000Z" itemprop="datePublished">2020-07-09</time>
 </a>
-      
-    </header>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E9%9D%A2%E8%AF%95/">面试</a>
   </div>
-</article>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-mapbox">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/12/06/mapbox%E5%9F%BA%E7%A1%80/" class="archive-article-date">
-  <time class="dt-published" datetime="2021-12-06T02:09:34.000Z" itemprop="datePublished">Dec 6</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/12/06/mapbox%E5%9F%BA%E7%A1%80/">基础</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      前端性能优化
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>##构建优化</p>
+<blockquote>
+<p>1.开启 gzip 压缩，gzip 压缩效率非常高。可以达到 70% 2.使用 CDN 减少打包体积</p>
+</blockquote>
+<blockquote>
+<p>3.预渲染</p>
+</blockquote>
+<p>##感知性能优化</p>
+<blockquote>
+<p>1.骨架屏</p>
+</blockquote>
+<blockquote>
+<p>2.loading</p>
+</blockquote>
+<p>##资源优化</p>
+<blockquote>
+<p>1.预加载<br>无线网后资源加载受限与网络。因此资源缓存，减少网络请求</p>
+</blockquote>
+<p>##图片优化</p>
+<blockquote>
+<p>1.懒加载，将真实图片 url 存在 data-url 中，只要 src 没有 url 就不会发出请求，滚动事件算处当前图片是否在可是区域。（当前元素到顶的高度-滚动条的高度&lt;当前屏幕可是区域高度）则显示图片</p>
+</blockquote>
+<blockquote>
+<p>2.压缩大小，减小带宽</p>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li></li>
+</ol>
+</blockquote>
+<p>##合理的利用缓存</p>
+<blockquote>
+<p>1.强缓存 catch-control:max-age,public:能被浏览器和代理服务器缓存。就是给资源设置一个过时间，每次<br>请求都会看时间是否过期</p>
+</blockquote>
+<blockquote>
+<p>2.强缓存失效会走协商缓存。<br>设置协商缓存：etag：“”，last-modified:”时间”<br>为什么要有 etag？<br>你可能会觉得使用 last-modified 已经足以让浏览器知道本地的缓存副本是否足够新，为什么还需要 etag 呢？HTTP1.1 中 etag 的出现（也就是说，etag 是新增的，为了解决之前只有 If-Modified 的缺点）主要是为了解决几个 last-modified 比较难解决的问题：</p>
+</blockquote>
+<p>一些文件也许会周期性的更改，但是他的内容并不改变(仅仅改变的修改时间)，这个时候我们并不希望客户端认为这个文件被修改了，而重新 get；</p>
+<p>某些文件修改非常频繁，比如在秒以下的时间内进行修改，(比方说 1s 内修改了 N 次)，if-modified-since 能检查到的粒度是秒级的，这种修改无法判断(或者说 UNIX 记录 MTIME 只能精确到秒)；</p>
+<p>某些服务器不能精确的得到文件的最后修改时间。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/07/09/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" data-id="cltzhcyde0016zoxhgyes7xtg" data-title="前端性能优化" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag">面试</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/10/21/vue%E9%9D%A2%E8%AF%95/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          vue
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/07/07/react-hook%E6%95%99%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">react-hook教程</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/04/01/es%206%207%208%209/" class="archive-article-date">
-  <time class="dt-published" datetime="2021-04-01T02:46:44.000Z" itemprop="datePublished">Apr 1</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/01/es%206%207%208%209/">es6 7 8</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/04/01/cesuim/Viewer/" class="archive-article-date">
-  <time class="dt-published" datetime="2021-04-01T02:46:44.000Z" itemprop="datePublished">Apr 1</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/01/cesuim/Viewer/">cesium viewer</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/03/02/css%E9%9D%A2%E8%AF%95/" class="archive-article-date">
-  <time class="dt-published" datetime="2021-03-02T08:25:50.000Z" itemprop="datePublished">Mar 2</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/02/css%E9%9D%A2%E8%AF%95/">css面试</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/03/01/%E9%9D%A2%E8%AF%95/" class="archive-article-date">
-  <time class="dt-published" datetime="2021-03-01T06:05:50.000Z" itemprop="datePublished">Mar 1</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/01/%E9%9D%A2%E8%AF%95/">js面试</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/10/21/vue%E9%9D%A2%E8%AF%95/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-10-21T02:04:56.000Z" itemprop="datePublished">Oct 21</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/10/21/vue%E9%9D%A2%E8%AF%95/">vue</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/07/09/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-07-09T07:51:09.000Z" itemprop="datePublished">Jul 9</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/09/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">前端性能优化</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/07/07/react-hook%E6%95%99%E7%A8%8B/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-07-07T03:14:52.000Z" itemprop="datePublished">Jul 7</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/07/react-hook%E6%95%99%E7%A8%8B/">react-hook教程</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/05/08/Docker/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-05-08T06:01:09.000Z" itemprop="datePublished">May 8</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/08/Docker/">Docker</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-  </nav>
 
 </section>
         

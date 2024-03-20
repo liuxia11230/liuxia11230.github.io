@@ -4,13 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>Archives | Hexo</title>
+  <title>前端安全防范 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <meta name="description" content="前言随着互联网的迅速发展，个大企业越来越重视安全性问题，这时前端人员要面对传统的 XSS,CSRF 等安全性问题之外还有，网络劫持的新型安全性问题。当然随着各大浏览器的崛起他们也在自身中加强了安全防范意识。 XSS 攻击 Cross-Site Scripting(跨站脚本攻击)为了和 css 区分于是缩写名称为 XSS。通过目标网站上注入恶意代码，使之在浏览器上面运行。攻击者可获取用户的敏感信息如">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端安全防范">
+<meta property="og:url" content="http://example.com/2020/05/07/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8%E9%98%B2%E8%8C%83/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="前言随着互联网的迅速发展，个大企业越来越重视安全性问题，这时前端人员要面对传统的 XSS,CSRF 等安全性问题之外还有，网络劫持的新型安全性问题。当然随着各大浏览器的崛起他们也在自身中加强了安全防范意识。 XSS 攻击 Cross-Site Scripting(跨站脚本攻击)为了和 css 区分于是缩写名称为 XSS。通过目标网站上注入恶意代码，使之在浏览器上面运行。攻击者可获取用户的敏感信息如">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-07T07:39:04.000Z">
+<meta property="article:modified_time" content="2024-03-20T07:26:42.059Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -67,230 +71,87 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2024" class="archive-year">2024</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/03/20/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  <time class="dt-published" datetime="2024-03-20T07:26:42.068Z" itemprop="datePublished">Mar 20</time>
+        <section id="main"><article id="post-前端安全防范" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/05/07/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8%E9%98%B2%E8%8C%83/" class="article-date">
+  <time class="dt-published" datetime="2020-05-07T07:39:04.000Z" itemprop="datePublished">2020-05-07</time>
 </a>
-      
-    </header>
+    
   </div>
-</article>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-mapbox">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/12/06/mapbox%E5%9F%BA%E7%A1%80/" class="archive-article-date">
-  <time class="dt-published" datetime="2021-12-06T02:09:34.000Z" itemprop="datePublished">Dec 6</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/12/06/mapbox%E5%9F%BA%E7%A1%80/">基础</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      前端安全防范
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>随着互联网的迅速发展，个大企业越来越重视安全性问题，这时前端人员要面对传统的 XSS,CSRF 等安全性问题之外还有，网络劫持的新型安全性问题。当然<br>随着各大浏览器的崛起他们也在自身中加强了安全防范意识。</p>
+<h2 id="XSS-攻击"><a href="#XSS-攻击" class="headerlink" title="XSS 攻击"></a>XSS 攻击</h2><blockquote>
+<p>Cross-Site Scripting(跨站脚本攻击)为了和 css 区分于是缩写名称为 XSS。<br>通过目标网站上注入恶意代码，使之在浏览器上面运行。攻击者可获取用户的敏感信息如 cookie，SessionID 等。<br>就算输入长度收到了限制，他可以引入外部脚本，并由浏览器执行，来完成比较复杂的攻击</p>
+</blockquote>
+<h2 id="XSS-分类"><a href="#XSS-分类" class="headerlink" title="XSS 分类"></a>XSS 分类</h2><p>储存型、反射型、DOM 型</p>
+<h3 id="储存型"><a href="#储存型" class="headerlink" title="储存型"></a>储存型</h3><p>1.攻击者将恶意代码提交到数据库中 2.用户再次打开用户网站是读取数据中的数据，通过浏览器执行恶有代码 3.恶意代码可窃取用户数据，或者冒充用户行为调用接口执行一些操作</p>
+<p>常出现在保存数据的网站中，如商品评论等。</p>
+<h3 id="反射型"><a href="#反射型" class="headerlink" title="反射型"></a>反射型</h3><p>1.用户构造出恶意的 URL，服务端从 URL 中读取数据，服务端经过操作在返回给浏览器。执行。</p>
+<p>储存行、反射型的区别是，一个存数据库，一个存 URL<br>反射型 XSS 漏洞常见于通过 URL 传递参数的功能，如网站搜索、跳转等。<br>由于需要用户主动打开恶意的 URL 才能生效，攻击者往往会结合多种手段诱导用户点击。<br>POST 的内容也可以触发反射型 XSS，只不过其触发条件比较苛刻（需要构造表单提交页面，并引导用户点击），所以非常少见。</p>
+<h3 id="DOM-型"><a href="#DOM-型" class="headerlink" title="DOM 型"></a>DOM 型</h3><p>1.用户构造出恶意的 URL，用户大开 URL，前端从 URL 中读取数据，恶意代码开始执行。</p>
+<blockquote>
+<p>DOM 型 XSS 跟前两种 XSS 的区别：DOM 型 XSS 攻击中，取出和执行恶意代码由浏览器端完成，属于前端 JavaScript 自身的安全漏洞，而其他两种 ?&gt;XSS 都属于服务端的安全漏洞。<a target="_blank" rel="noopener" href="http://localhost:8080/dvwa/%3E">http://localhost:8080/dvwa/&gt;</a> vulnerabilities&#x2F;xss_d&#x2F;?default&#x3D;English”<script>alert(1)"</script></p>
+</blockquote>
+<h2 id="XSS-防御"><a href="#XSS-防御" class="headerlink" title="XSS 防御"></a>XSS 防御</h2><p>xss 攻击的本质是</p>
+<ul>
+<li>攻击者提交恶意代码</li>
+<li>浏览器执行恶意代码</li>
+</ul>
+<p>那么前端过滤用户输入行吗？当然是不行的，要是攻击者直接构造请求绕过前端过滤，也是不行的。</p>
+<h3 id="CSRF-cross-site-quest-forgery-跨站点请求伪造攻击"><a href="#CSRF-cross-site-quest-forgery-跨站点请求伪造攻击" class="headerlink" title="CSRF cross-site-quest-forgery(跨站点请求伪造攻击)"></a>CSRF cross-site-quest-forgery(跨站点请求伪造攻击)</h3><blockquote>
+<p>原理：发生在 2 个网站之间， 目标网站 A，攻击网站 B，当你访问过 A 后已经拿到目标网站的一些认证，比如你登录过后，不小心进入 B 网站，诱导你点击一些请求链接，此时像你的服务其发起请求，造成攻击；</p>
+</blockquote>
+<blockquote>
+<p>解决：验证码，token，检查 http 请求头中的 referer,请求的来源地址</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/05/07/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8%E9%98%B2%E8%8C%83/" data-id="cltzhcyde0013zoxh9xcs3apw" data-title="前端安全防范" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/05/08/Docker/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Docker
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/05/07/webpack%E8%AF%A6%E8%A7%A3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">webpack详解</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/04/01/es%206%207%208%209/" class="archive-article-date">
-  <time class="dt-published" datetime="2021-04-01T02:46:44.000Z" itemprop="datePublished">Apr 1</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/01/es%206%207%208%209/">es6 7 8</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/04/01/cesuim/Viewer/" class="archive-article-date">
-  <time class="dt-published" datetime="2021-04-01T02:46:44.000Z" itemprop="datePublished">Apr 1</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/01/cesuim/Viewer/">cesium viewer</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/03/02/css%E9%9D%A2%E8%AF%95/" class="archive-article-date">
-  <time class="dt-published" datetime="2021-03-02T08:25:50.000Z" itemprop="datePublished">Mar 2</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/02/css%E9%9D%A2%E8%AF%95/">css面试</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/03/01/%E9%9D%A2%E8%AF%95/" class="archive-article-date">
-  <time class="dt-published" datetime="2021-03-01T06:05:50.000Z" itemprop="datePublished">Mar 1</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/01/%E9%9D%A2%E8%AF%95/">js面试</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/10/21/vue%E9%9D%A2%E8%AF%95/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-10-21T02:04:56.000Z" itemprop="datePublished">Oct 21</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/10/21/vue%E9%9D%A2%E8%AF%95/">vue</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/07/09/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-07-09T07:51:09.000Z" itemprop="datePublished">Jul 9</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/09/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">前端性能优化</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/07/07/react-hook%E6%95%99%E7%A8%8B/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-07-07T03:14:52.000Z" itemprop="datePublished">Jul 7</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/07/react-hook%E6%95%99%E7%A8%8B/">react-hook教程</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/05/08/Docker/" class="archive-article-date">
-  <time class="dt-published" datetime="2020-05-08T06:01:09.000Z" itemprop="datePublished">May 8</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/08/Docker/">Docker</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-  </nav>
 
 </section>
         
